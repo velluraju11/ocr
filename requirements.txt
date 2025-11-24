@@ -2,3 +2,9 @@ pydantic
 pydantic-settings
 openai
 python-dotenv
+fastapi
+uvicorn
+websockets
+pytest
+pytest-asyncio
+httpx

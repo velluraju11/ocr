@@ -330,3 +330,36 @@ This is YOUR custom mode, Boss:
 - Ryha auto-corrects user mistakes
 
 This mode is only for you.
+
+---
+
+## 🧪 Test Report
+
+This section documents the verification of the Ryha AI Builder system.
+
+### Automated Test Suite Results
+
+**Summary:** 10 Tests Passed, 0 Failed.
+
+| Component | Test Case | Status | Notes |
+| :--- | :--- | :--- | :--- |
+| **Agents** | `test_llm_mock_fallback` | ✅ PASS | Verified LLMService falls back to mock when no key is present. |
+| **Agents** | `test_pm_agent_mock` | ✅ PASS | Verified Product Manager agent generates markdown spec. |
+| **Agents** | `test_architect_agent_mock` | ✅ PASS | Verified Architect agent generates system architecture. |
+| **API** | `test_read_main` | ✅ PASS | Verified Web UI loads (200 OK) with correct Boss Mode title. |
+| **API** | `test_static_files` | ✅ PASS | Verified CSS and JS assets are served correctly. |
+| **API** | `test_websocket_endpoint` | ✅ PASS | Verified real-time build streaming via WebSockets. |
+| **Config** | `test_boss_mode_default` | ✅ PASS | Confirmed Boss Mode is active by default. |
+| **Config** | `test_default_model` | ✅ PASS | Confirmed default model is GPT-4o. |
+| **Config** | `test_env_loading` | ✅ PASS | Confirmed environment variables override default settings. |
+| **Orchestrator** | `test_orchestrator_generator_flow` | ✅ PASS | Verified generator pattern yields expected events (log, artifact, complete). |
+
+### Integration Verification
+
+**Scenario:** CLI Smoke Test
+**Input:** "CLI Test"
+**Result:** Successfully generated Product Specification and System Architecture printed to console.
+
+**Scenario:** Web UI Verification
+**Method:** Playwright Automated Screenshot
+**Result:** Successfully rendered dark-mode dashboard with all UI elements present.

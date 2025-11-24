@@ -1,0 +1,10 @@
+services:
+  ryha-builder:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - BOSS_MODE=true
+    volumes:
+      - ./src:/app/src

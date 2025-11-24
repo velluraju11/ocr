@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryha AI Builder | Boss Mode</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                🚀 Ryha AI
+            </div>
+            <nav>
+                <a href="#" class="active">New Project</a>
+                <a href="#">History</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="status-panel">
+                <div class="status-item">
+                    <span class="status-dot online"></span>
+                    Ryha Engine: Online
+                </div>
+                <div class="status-item">
+                    <span class="status-dot online"></span>
+                    Boss Mode: Active
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>New Project</h1>
+                <div class="user-profile">Boss</div>
+            </header>
+
+            <div class="builder-interface">
+                <!-- Input Area -->
+                <div class="input-section">
+                    <textarea id="ideaInput" placeholder="Describe what you want to build, Boss... (e.g. 'A secure chat app for enterprise teams')"></textarea>
+                    <button id="buildBtn" onclick="startBuild()">Build Software ⚡</button>
+                </div>
+
+                <!-- Output Area -->
+                <div class="output-section">
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab('terminal')">Terminal</button>
+                        <button class="tab-btn" onclick="switchTab('spec')">Product Spec</button>
+                        <button class="tab-btn" onclick="switchTab('architecture')">Architecture</button>
+                    </div>
+
+                    <!-- Terminal View -->
+                    <div id="terminal" class="tab-content active">
+                        <div class="terminal-window" id="terminalOutput">
+                            <div class="log-line system">> Ryha AI Builder v1.0.0 initialized...</div>
+                            <div class="log-line system">> Waiting for input...</div>
+                        </div>
+                    </div>
+
+                    <!-- Spec View -->
+                    <div id="spec" class="tab-content">
+                        <div class="markdown-preview" id="specOutput">
+                            <p class="placeholder-text">Product Specification will appear here...</p>
+                        </div>
+                    </div>
+
+                    <!-- Architecture View -->
+                    <div id="architecture" class="tab-content">
+                        <div class="markdown-preview" id="archOutput">
+                            <p class="placeholder-text">System Architecture will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
