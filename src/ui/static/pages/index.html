@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryha AI - The Ultimate Thought-to-Software Engine</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(124, 58, 237, 0.15), transparent 60%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.05);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid var(--border);
+        }
+
+        .features {
+            padding: 6rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-panel);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🚀 Ryha AI</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/pricing">Pricing</a>
+            <a href="#">Docs</a>
+            <a href="/app" class="btn-cta">Start Building</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>The Ultimate<br><span style="color: var(--accent)">Thought-to-Software</span> Engine</h1>
+            <p>Ryha AI Builder converts raw human ideas into complete, deployable software. Websites, Mobile Apps, APIs, and more—generated live by 5 parallel AI agents.</p>
+            <div class="hero-btns">
+                <a href="/app" class="btn-primary">Build Software Now</a>
+                <a href="/pricing" class="btn-secondary">View Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">5 AI Engineers in One</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Ryha orchestrates a full team to build your vision.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Product Manager</div>
+                    <div class="feature-desc">Converts ideas into detailed product specifications and requirements.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧱</div>
+                    <div class="feature-title">System Architect</div>
+                    <div class="feature-desc">Designs scalable architecture, tech stacks, and database schemas.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-title">Backend Engineer</div>
+                    <div class="feature-desc">Builds APIs, auth logic, and database models securely.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-title">Frontend Engineer</div>
+                    <div class="feature-desc">Creates responsive web, mobile, and desktop interfaces.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <div class="feature-title">DevOps & QA</div>
+                    <div class="feature-desc">Handles testing, Dockerization, and deployment pipelines.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🃏</div>
+                    <div class="feature-title">Boss Mode</div>
+                    <div class="feature-desc">Exclusive mode prioritizing security, optimization, and autonomy.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ryha AI Builder. All rights reserved. <br> Built by Jules.</p>
+        </div>
+    </footer>
+</body>
+</html>

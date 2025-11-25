@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Ryha AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .pricing-section {
+            padding: 6rem 0;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .pricing-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-header p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--accent);
+            position: relative;
+            background: linear-gradient(180deg, rgba(124, 58, 237, 0.1), var(--bg-panel));
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex: 1;
+        }
+
+        .features-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .features-list li.active {
+            color: var(--text-primary);
+        }
+
+        .check {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .btn-plan {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-plan.primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-plan.primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-plan.outline {
+            background-color: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .btn-plan.outline:hover {
+            border-color: var(--text-primary);
+            background-color: rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">🚀 Ryha AI</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/pricing" style="color: var(--accent)">Pricing</a>
+            <a href="#">Docs</a>
+            <a href="/app" class="btn-cta">Start Building</a>
+        </div>
+    </nav>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-header">
+                <h1>Choose Your Power Level</h1>
+                <p>Start small or unleash the full autonomous engineering team.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-price">$0<span>/mo</span></div>
+                    <ul class="features-list">
+                        <li class="active"><span class="check">✓</span> 1 Active Project</li>
+                        <li class="active"><span class="check">✓</span> Mock Mode (No API Key)</li>
+                        <li class="active"><span class="check">✓</span> Product Spec Generator</li>
+                        <li>Basic Architecture Design</li>
+                        <li>Community Support</li>
+                    </ul>
+                    <a href="/app" class="btn-plan outline">Get Started</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card popular">
+                    <div class="badge">MOST POPULAR</div>
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">$49<span>/mo</span></div>
+                    <ul class="features-list">
+                        <li class="active"><span class="check">✓</span> Unlimited Projects</li>
+                        <li class="active"><span class="check">✓</span> Real AI Code Gen (BYO Key)</li>
+                        <li class="active"><span class="check">✓</span> Full Architecture & DB Design</li>
+                        <li class="active"><span class="check">✓</span> Live Preview Panel</li>
+                        <li class="active"><span class="check">✓</span> Priority Queue</li>
+                    </ul>
+                    <a href="/app" class="btn-plan primary">Upgrade to Pro</a>
+                </div>
+
+                <!-- Boss Mode -->
+                <div class="pricing-card">
+                    <div class="plan-name">Boss Mode</div>
+                    <div class="plan-price">$199<span>/mo</span></div>
+                    <ul class="features-list">
+                        <li class="active"><span class="check">✓</span> Everything in Pro</li>
+                        <li class="active"><span class="check">✓</span> <b>Boss Mode</b> Persona</li>
+                        <li class="active"><span class="check">✓</span> Auto-Security Scanning</li>
+                        <li class="active"><span class="check">✓</span> Autonomous Self-Correction</li>
+                        <li class="active"><span class="check">✓</span> Private Cloud Hosting</li>
+                    </ul>
+                    <a href="/app" class="btn-plan outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ryha AI Builder. All rights reserved. <br> Built by Jules.</p>
+        </div>
+    </footer>
+</body>
+</html>

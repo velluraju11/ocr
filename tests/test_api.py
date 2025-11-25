@@ -4,19 +4,31 @@ from src.server import app
 
 client = TestClient(app)
 
-def test_read_main():
-    """Test the root endpoint serving the UI."""
+def test_home_page():
+    """Test the landing page."""
     response = client.get("/")
     assert response.status_code == 200
-    assert "Ryha AI Builder" in response.text
+    assert "Thought-to-Software" in response.text
+
+def test_pricing_page():
+    """Test the pricing page."""
+    response = client.get("/pricing")
+    assert response.status_code == 200
     assert "Boss Mode" in response.text
+    assert "$199" in response.text
+
+def test_app_page():
+    """Test the builder app page."""
+    response = client.get("/app")
+    assert response.status_code == 200
+    assert "Ryha AI Builder" in response.text
 
 def test_static_files():
     """Test that static CSS/JS files are served."""
-    response = client.get("/static/styles.css")
+    response = client.get("/static/css/style.css")
     assert response.status_code == 200
 
-    response = client.get("/static/script.js")
+    response = client.get("/static/js/app.js")
     assert response.status_code == 200
 
 def test_websocket_endpoint():

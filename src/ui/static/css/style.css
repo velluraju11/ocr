@@ -1,0 +1,85 @@
+:root {
+    --bg-dark: #0f111a;
+    --bg-panel: #1a1c29;
+    --accent: #7c3aed;
+    --accent-hover: #6d28d9;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: #2d3748;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: rgba(15, 17, 26, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-cta {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-cta:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Common Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--text-secondary);
+}

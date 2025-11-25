@@ -11,8 +11,18 @@ app = FastAPI(title="Ryha AI Builder")
 app.mount("/static", StaticFiles(directory="src/ui/static"), name="static")
 
 @app.get("/")
-async def get():
-    with open("src/ui/static/index.html", "r") as f:
+async def get_home():
+    with open("src/ui/static/pages/index.html", "r") as f:
+        return HTMLResponse(content=f.read())
+
+@app.get("/pricing")
+async def get_pricing():
+    with open("src/ui/static/pages/pricing.html", "r") as f:
+        return HTMLResponse(content=f.read())
+
+@app.get("/app")
+async def get_app():
+    with open("src/ui/static/pages/app.html", "r") as f:
         return HTMLResponse(content=f.read())
 
 @app.websocket("/ws/build")
